@@ -22,7 +22,7 @@ class TkGuide:
         uidict["guide"].delete(1.0, "end")
         # Hack! Should be elsewhere
         if self.step_index == 0:
-            self.image = tk.PhotoImage(file=os.path.join("docs", "platypus_logo.png")).subsample(2)
+            self.image = tk.PhotoImage(name=os.path.join("docs", "platypus_logo.png")).subsample(2)
             uidict["guide"].image_create('end', image=self.image)
             uidict["guide"].insert('end', "\n")
         add_tagged(uidict["guide"], limited_markdown(self.step.message.strip()))
